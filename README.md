@@ -2,5 +2,5 @@
 
 Tool for parsing the persistent resource test results https://github.com/osic/persistent-resources-tests
 
-This parsing tool assumes the files given is/was converted from subunit to csv format. For example using `` cat subunitFile|subunit-1to2|subunit2csv`` will do the trick :). Script returns a valid json containing info about test (name, status, service).  
+This parsing tool will convert the given subunit files to csv format enabling them for parsing. The script then will returns a valid json containing info about test (name, status, service, start time, stop time, etc).  
 
