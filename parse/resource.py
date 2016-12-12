@@ -52,7 +52,7 @@ def parse_data(sub_file, _file):
         values = {
                 "test_name": test,
                 "task": action,
-                action: 1 if status == "success" else 0,
+                action: 1 if status in ("success", "skip") else 0,
                 "start": start,
                 "stop": stop,
                 "service": product
