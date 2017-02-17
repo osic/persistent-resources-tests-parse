@@ -29,7 +29,7 @@ def parse_data(sub_file, _file):
         test_name, status, start, stop = line.split(",")
 
         # if test fail during setup
-        if "setUpClass" in test_name:
+        if "setUpClass" in test_name or "tearDownClass" in test_name:
             _, action, product = test_name.split("(")[1].split(".")[-2].split("_", 2)
             test = "test_" + action + "_" + product
         else:
